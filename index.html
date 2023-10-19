@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background: url("https://img.freepik.com/free-vector/realistic-style-technology-particle-background_23-2148426704.jpg?size=626&ext=jpg&ga=GA1.1.283914791.1696910267&semt=ais");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .heading{
+            text-align: center;
+            font-weight: bold;
+            font-size: 42px;
+            color: rgb(219, 189, 15);
+            text-shadow: 4px 2px #e66d0a;
+          
+        }
+        .container{
+            display: grid;
+            gap: 40px;
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+            justify-items: center;
+        }
+        .container a{
+            text-decoration: none;
+            color: black;
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: aliceblue;
+            border: none;
+            border-radius: 8px;
+            width: 350px;
+            height: 250px;
+            padding: 10px;
+            margin-top: 30px;
+            box-shadow: 10px 10px #484b4a;
+        }
+        .box:hover{
+          transform: scale(1.2);
+        }
+        .box img{
+            width: 150px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="heading">#7 Days #7 Javascript Project Challenge</h1>
+    <div class="container">
+        <a href="To-do-App/Index.html">
+            <div class="To-do box">
+                <h1>Day 1</h1>
+                <img src="To-do-App/Resources/images/icon.png" alt="">
+                <hr style="color: black; background-color: black;padding: 1px;width: 100%;">
+                <h1>To Do App</h1>
+            </div>
+        </a>
+        <a href="Weather App/index.html">
+            <div class="weather box">
+                <h1>Day 2</h1>
+                <img src="Weather App/Resources/images/rain.png" alt="">
+                <hr style="color: black; background-color: black;padding: 1px;width: 100%;">
+                <h1>Weather App</h1>
+            </div>
+        </a>
+        <a href="Calculator/index.html">
+            <div class="Calculator box">
+                <h1>Day 3</h1>
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJ4AAACeCAMAAAD0W0NJAAAAq1BMVEX///9HuFw9tlSp3LJDt1lGu1k5sVTg8eOQv6Rqw3n1+/ZJnHIqsUeCtpgtqk82tE8srU6uzL/E3s7O6dIyqlPu+PC84sLJ6M6S0pyJzZSv3bdavmzw9vXW7tpkwXOBy40gsEBatHRgpoKYyqur0bzi7Ohrt4Z6yYdRu2TL3ddBsVyd0qgSrjgOpz9UoHshok0Nl01JsmWcxLA/omctoFlTpnhWrndKrGg7mGnQLhcPAAAEM0lEQVR4nO2baXuiMBCAJaZSWNesB17gUaur7W6ttdf+/1+2iKKBHNowFLo77zc18rwMyUw0SaWCIAiCIAiCIAiCIAjyr+G1u8NqJobdtpeLmjvq+wSEVX/kQst1HcaoBQJlzBmCCvZ8AuR2MCR+D0zOG0AFjhNkA6BO6I0ZtNwOMgbxa1skD7vQz2pnt/Pystv5ZY6fN87NDuL5DnLpd0e/QTa7Xq52lsUy5RfXB88oSaifJT93c+x4e8gwQ/AcefAIC0snA1Gnjnn4RvKeR5bdHROQfslGxnp9qQBxDh8vz8ePUt3LSK9vrCcfGPV4tJ0d1tRyVvwtEN8RphbUN7Xz5NE56rV+6O2IP3K9Uxeg9arndoUAEtPU3M6mR/ZJYxJfhXT3F035EdPKq0grF+pR345auYf4TYfxVZN+e2sDhtmiZ8fXiYbQKcGl7to481Wz6PFdPpzOspPEYpXUqxait+KuNOHsKnf3iadbjJ5Ffp2u5HKVP5jV8ogeYQd+H/Ue4rek91G7lV51/Zi6DRA9uuy19/TiROW143eW0vw9lfgF60Y6yhB6dKkt3XI/IvqlYwekx/TDfy6vb/WUnxg7KD198lTopeIXzITYFatHWYtrdd2Q9IFCo5f82kQyxIvse+lvLcV2MCPXCTQtg9erC2K3Q4wfTN4jN9vmgcXh80X8RnPWkcZO0iFc4ScAUNWgtc6eh7i3tx4P73RqlgQq7w/p+BVUc3m7oKn2K8GMZf3I5T+7DNHj5nvBukO5+rG4L4GeRY+z5V2dpaf60UyOo6L0nu6iVmGdjWpFPH/ZbpLtCtKzyFOUgY51dj//a27Sv9QK0gvj1woWs9Mchd0GwfZF+J0LrHcsv+f0LNp43nQ4HfbyLE5ZoPVo/B/LqzQbJ9ueeZ2D3q6+zefz7atk8mYAuF740MJC1pDW2TLogYJ6qId6qId6qId6qId6qAeuRzXfJbkuu1xkt+rZStqJdeIi9Jitu7DNr6oVoEct7SpIcMOFrxA97YVR7yvrWeSz+x6tq5kK96FfBkn8AQmzruFrduu4A+GvHfZ2rWS9Ac97de1ONncs+NGGkhp81Zjqd2L9zNBNP0NPumiFel9Dr66t8ZU3QY9qgNcjy4W6YdC8T8mFichR4hNwPat2813JTFwNWNquEjux6Ae2YKpGzMraTXm2/x9MCRQb5KD1TDfIme9a/pCe6fZCxeZMaD3TzZmKra2XoB8ai3dez/jUwcp4xzwZaPaVBN+5+V5iUf9j9DP80H3/puQPvxhHzLdVKzalX+Z3pYZvl2FTumSWCQ0dZzgR8QkHIkzTShS+ch8nKflhnEplkOvjZZNsdmU/CJbvMTr9FPwiyn0IMbfnS8YAsYv8cjkAO4E7hV3q48MV4MPXhI274KfDy3x0fU+JD/4jCIIgCIIgCIIgCIIUyV9X8Wel33hCdwAAAABJRU5ErkJggg==" alt="">
+                <hr style="color: black; background-color: black;padding: 1px;width: 100%;">
+                <h1>Calculator</h1>
+            </div>
+        </a>
+    </div>
+</body>
+</html>

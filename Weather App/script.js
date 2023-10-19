@@ -16,37 +16,39 @@ async function fetchdata(city){
     console.log(data);
     
 
-    if(data.cod === '400'){
-        let err = document.querySelector('.error')
+    let weather = document.querySelector('.weather')
+    let err = document.querySelector('.error')
+    if(data.cod === '400' || data.cod === '404' ){
+        weather.style.display = "none"  
         err.style.display = "block"
-        
     }else{
-        let weather = document.querySelector('.weather')
         cityname.innerHTML = data.name
         temperature.innerHTML = data.main.temp+" °C"
-        humidity.innerHTML = data.main.humidity
-        wind.innerHTML = data.wind.speed
+        humidity.innerHTML = data.main.humidity+"%"
+        wind.innerHTML = data.wind.speed+"km/h"
 
         if (data.weather[0].main === 'Clouds') {
             img.src = "Resources/images/clouds.png";
-        } else if (data.weather[0].main === 'Haze') {
+        } else if (data.weather[0].main === 'Haze'){
             img.src = 'Resources/images/drizzle.png';
-        } else if (data.weather[0].main === 'Rain') {
+        } else if (data.weather[0].main === 'Rain'){
             img.src = 'Resources/images/rain.png';
-        } else if (data.weather[0].main === 'Snow') {
+        } else if (data.weather[0].main === 'Snow'){
             img.src = 'Resources/images/snow.png';
-        }else if (data.weather[0].main === 'Clear') {
+        }else if (data.weather[0].main === 'Clear'){
             img.src = 'Resources/images/clear.png';
         }
+
+        err.style.display = "none"
         weather.style.display = "block"
 
-    }
-
-   
-    
-    
+    }    
 }
 button.addEventListener("click",function (event) {
-    fetchdata(input.value) 
+    if(input.value==="jashpur"){
+        input.value = "jashpurnagar"
+        fetchdata(input.value) 
+    }else{
+        fetchdata(input.value) 
+    }
 })
-
