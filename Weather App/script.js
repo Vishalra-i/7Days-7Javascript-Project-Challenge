@@ -45,8 +45,8 @@ async function fetchdata(city){
     }    
 }
 button.addEventListener("click",function (event) {
-    if(input.value==="jashpur"){
-        input.value = "jashpurnagar"
+    if(input.value==="jashpur"||input.value==="Jashpur"){
+        input.value = "Jashpurnagar"
         fetchdata(input.value) 
     }else{
         fetchdata(input.value) 
